@@ -89,67 +89,10 @@ ul {
   padding: 0;
 }
 
-/* FORMS*/
-.field-validation-error {
-  color: #f00;
-}
-
-.field-validation-valid {
-  display: none;
-}
-
-.input-validation-error {
-  border: 1px solid #f00;
-  background-color: #fee;
-}
-
-.validation-summary-errors {
-  font-weight: bold;
-  color: #f00;
-}
-
-.validation-summary-valid {
-  display: none;
-}
-
 /* PRIMARY-COLOR BUTTONS */
 .btn.btn-primary.btn-primary-color {
   font-weight: bold;
   color: var(--black);
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-}
-
-/* WELCOME (AUTH) PAGE STYLE */
-.logo {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  width: 100px;
-}
-
-/* NAV STYLE */
-.site-icon {
-  width: 50px;
-}
-
-.user-icon {
-  width: 50px;
-}
-
-.nav-link {
-  font-family: "Roboto-medium";
-  font-size: 1.5rem;
-  color: var(--black);
-}
-
-.border-primary-color {
-  border-color: var(--secondary-color) !important;
-}
-
-/* GAMENIGHT DETAIL PAGE STYLE */
-.list-img {
-  margin-inline-end: 1rem;
-  width: 35px;
-  height: 35px;
-  object-fit: cover;
 }

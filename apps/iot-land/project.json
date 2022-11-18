@@ -17,7 +17,7 @@
         "assets": ["apps/iot-land/src/favicon.ico", "apps/iot-land/src/assets"],
         "styles": [
           "apps/iot-land/src/styles.css",
-          "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"
         ],
         "scripts": [
           "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",

@@ -1,0 +1,12 @@
+/* FOOTER STYLE */
+.footer {
+  font-family: "Roboto-medium";
+}
+a:hover {
+  color: var(--white);
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+}

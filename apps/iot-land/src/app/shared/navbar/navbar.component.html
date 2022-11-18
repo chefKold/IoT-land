@@ -1,0 +1,69 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" asp-controller="Home" asp-action="Index"
+      ><img
+        class="site-icon"
+        src="../../assets/images/site-logo.png"
+        alt="IoT Land Logo"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            TODO-ENTITY-NAV
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">TODO-ENTITY-OPTION 1</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#">TODO-ENTITY-OPTION 2</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+      </ul>
+      <div class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle ps-0"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          ><img
+            class="user-icon"
+            src="../../assets/images/user-icon.png"
+            alt="profile-menu"
+        /></a>
+        <ul class="dropdown-menu dropdown-menu-lg-end">
+          <li><a class="dropdown-item" routerLink="/home">Mijn gegevens</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" routerLink="/home">Uitloggen</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
