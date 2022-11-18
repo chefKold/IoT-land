@@ -1,0 +1,52 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  run-npm-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: npm install and build the Website
+        run: |
+          npm ci
+          nx build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: "./dist/apps/iot-land"
+
+  run-npm-test:
+    runs-on: ubuntu-latest
+    needs: run-npm-build
+    steps:
+      - uses: actions/checkout@v2
+      - name: npm install and run test
+        run: |
+          npm ci
+          nx test
+
+  netlify-deploy:
+    runs-on: ubuntu-latest
+    needs: run-npm-test
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: iot-land
+          path: "./dist/apps/iot-land"
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: "./dist/apps/iot-land"
+          production-branch: main
+          enable-commit-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1

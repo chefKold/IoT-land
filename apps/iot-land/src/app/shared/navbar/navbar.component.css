@@ -1,0 +1,18 @@
+/* NAV STYLE */
+.site-icon {
+  width: 50px;
+}
+
+.user-icon {
+  width: 50px;
+}
+
+.nav-link {
+  font-family: "Roboto-medium";
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.border-primary-color {
+  border-color: var(--secondary-color) !important;
+}
