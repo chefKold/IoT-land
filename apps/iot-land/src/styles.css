@@ -10,14 +10,14 @@
 
 @font-face {
   font-family: "Roboto-medium";
-  src: url(./assets/fonts/Roboto/Roboto-Medium.ttf);
+  src: url(assets/fonts/Roboto/Roboto-Medium.ttf);
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto-serif-medium";
-  src: url(./assets/fonts/Roboto_Serif/RobotoSerif-medium.ttf);
+  src: url(assets/fonts/Roboto_Serif/RobotoSerif-medium.ttf);
   font-weight: 200;
   font-display: swap;
 }
