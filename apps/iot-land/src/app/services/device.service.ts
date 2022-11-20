@@ -30,6 +30,10 @@ export class DeviceService {
     this.storage[index] = device;
   }
 
+  getDeviceById(id: number): Device | undefined {
+    return this.storage.find((d) => d.id === id);
+  }
+
   private seedData(): void {
     this.storage.push({
       id: 1,

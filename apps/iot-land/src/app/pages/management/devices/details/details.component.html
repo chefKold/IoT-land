@@ -1,0 +1,18 @@
+<div *ngIf="device">
+  <h1>{{ device.name }}</h1>
+  <ul>
+    <li><b>Id:</b> {{ device.id }}</li>
+    <li><b>Processorsnelheid (MHz)</b>{{ device.mhz }}</li>
+    <li>
+      <b>Installatie datum:</b>
+      {{ device.installationDate.toLocaleDateString("nl-NL") }}
+    </li>
+    <li><b>Is in onderhoud:</b> {{ device.inMaintenance }}</li>
+    <li><b>Netwerkadres:</b> {{ device.networkAddress }}</li>
+  </ul>
+  <div>
+    <p>
+      {{ device.description }}
+    </p>
+  </div>
+</div>

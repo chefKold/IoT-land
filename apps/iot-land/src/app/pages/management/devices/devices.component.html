@@ -12,7 +12,15 @@
     <tbody>
       <tr *ngFor="let device of devices">
         <td>{{ device.id }}</td>
-        <td>{{ device.name }}</td>
+
+        <td>
+          <a
+            [title]="device.name + ' details'"
+            [routerLink]="['/devices', device.id]"
+          >
+            {{ device.name }}
+          </a>
+        </td>
         <td>{{ device.installationDate.toLocaleDateString("nl-NL") }}</td>
         <td>{{ device.inMaintenance }}</td>
         <td>{{ device.networkAddress }}</td>
