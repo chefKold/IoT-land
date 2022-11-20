@@ -1,1 +1,22 @@
-<p>devices works!</p>
+<div class="min-vh100">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Naam</th>
+        <th scope="col">Installatie datum</th>
+        <th scope="col">Is in onderhoud</th>
+        <th scope="col">Netwerkadres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let device of devices">
+        <td>{{ device.id }}</td>
+        <td>{{ device.name }}</td>
+        <td>{{ device.installationDate.toLocaleDateString("nl-NL") }}</td>
+        <td>{{ device.inMaintenance }}</td>
+        <td>{{ device.networkAddress }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -8,7 +8,9 @@ export class DeviceService {
   storage: Device[] = [];
 
   constructor() {
-    this.seedData();
+    if (this.storage.length === 0) {
+      this.seedData();
+    }
   }
 
   addDevice(device: Device): void {
