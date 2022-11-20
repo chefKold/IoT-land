@@ -7,9 +7,18 @@
     </p>
     <h1>IoT-land</h1>
     <p>
-      Hier beschrijft je wat je project inhoudt. Beschrijf ook de
-      entiteiten/domeinobjecten die je gebruikt, en benoem per entiteit de
-      attributen met hun datatype.
+      IoT-land is een management applicatie voor IoT-apparaten binnen
+      facilities. Het portaal die een interface biedt welke inzage en beheer
+      mogelijkheden geeft aan clusters van apparaten binnen 1 of meerdere
+      ‘facilities’ (gebouwen). Gebruikers beheren nul of meerdere devices. Een
+      device kan een koppeling hebben met nul of meerdere andere devices, maar
+      kan zelf ook onderdeel zijn van bestaande koppelingen. Er ontstaat dus een
+      netwerk. De devices interacteren met sensoren, dit kan zowel lezen als
+      schrijven zijn. Sensoren produceren metingen. Een meting kan alleen
+      bestaan als er een sensor bestaat. Een absolute gemeten waarde wordt
+      genormaliseerd op basis van het type sensor. Voor de zekerheid is van alle
+      apparaten hun fabrikant opgenomen. Als deze nog actief is, dan weet een
+      gebruiker waar hij of zij eventueel kan aanbellen in geval van problemen.
     </p>
   </div>
   <div class="col-sm-6 col-md-4 col-lg-3">
@@ -31,39 +40,81 @@
 </div>
 
 <h3>Entiteiten</h3>
-<p>
-  Hier geef je een toelichting op je entiteiten. Voeg ook een afbeelding van je
-  model toe zoals dat bij NoSql gevraagd wordt.
-</p>
+<p>Alle entiteiten en hun relaties zijn zichtbaar in onderstaand ERD.</p>
 
-<img src="assets/images/erd.png" class="px-5 py-5" alt="..." />
+<img
+  src="assets/images/erd.png"
+  class="px-5 py-3"
+  alt="Iot-Land ERD"
+  width="950px"
+/>
 
 <div class="row">
   <div class="col-sm-12 col-md-4">
-    <p>Entiteit 1</p>
+    <p>User</p>
     <ul>
-      <li>naam: string</li>
       <li>id: number</li>
-      <li>birthdate: date</li>
-      <li>isSelected: boolean</li>
+      <li>firstName: string</li>
+      <li>lastName: string</li>
+      <li>street: string</li>
+      <li>houseNumber: number</li>
+      <li>city: string</li>
+      <li>password: string</li>
     </ul>
   </div>
   <div class="col-sm-12 col-md-4">
-    <p>Entiteit 2</p>
+    <p>Device</p>
     <ul>
-      <li>naam: string</li>
       <li>id: number</li>
-      <li>birthdate: date</li>
-      <li>isSelected: boolean</li>
+      <li>name: string</li>
+      <li>description: string</li>
+      <li>installationDate: date</li>
+      <li>inMaintenance: boolean</li>
+      <li>mips: number</li>
+      <li>NetworkAddress: string</li>
     </ul>
   </div>
   <div class="col-sm-12 col-md-4">
-    <p>Entiteit 3</p>
+    <p>Facility</p>
     <ul>
-      <li>naam: string</li>
       <li>id: number</li>
-      <li>birthdate: date</li>
-      <li>isSelected: boolean</li>
+      <li>name: string</li>
+      <li>street: string</li>
+      <li>houseNumber: number</li>
+      <li>city: string</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-4">
+    <p>Sensor</p>
+    <ul>
+      <li>id: number</li>
+      <li>name: string</li>
+      <li>description: string</li>
+      <li>type: string</li>
+      <li>isWireless: boolean</li>
+      <li>NetworkAddress: string</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Measurement</p>
+    <ul>
+      <li>sensorId: number</li>
+      <li>name: string</li>
+      <li>rawValue: number</li>
+      <li>normalizedValue: number</li>
+      <li>batteryLevel: number</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Manufacturer</p>
+    <ul>
+      <li>id: number</li>
+      <li>name: string</li>
+      <li>industry: string</li>
+      <li>country: string</li>
+      <li>isActive: boolean</li>
     </ul>
   </div>
 </div>
@@ -72,8 +123,9 @@
   <div class="col">
     <h3>Userstories</h3>
     <p>
-      Hier verwoord je in de vorm van userstories de functionaliteit van jouw
-      applicatie.
+      IoT-land biedt diverse interactie mogelijkheden rondom IoT-management. In
+      het onderstaande overzicht staan al deze zaken beschreven in de vorm van
+      user stories.
     </p>
 
     <table class="table table-bordered">
@@ -86,33 +138,34 @@
         <tr>
           <td>1</td>
           <td>
-            Als gebruiker wil ik een overzicht van movies kunnen raadplegen,
-            zodat ik kan zien welke movies op dit moment beschikbaar zijn.
+            Als gebruiker wil ik een overzicht van devices kunnen raadplegen,
+            zodat ik mijn devices gemakkelijk kan vinden.
           </td>
-          <td>Overzicht is een grid.</td>
+          <td>Overzicht is een tabel.</td>
         </tr>
         <tr>
           <td>2</td>
           <td>
-            Als ingelogde gebruiker wil ik zelf een movie kunnen toevoegen,
-            zodat ik mijn movies in het systeem kan invoeren.
+            Als gebruiker wil ik kunnen navigeren naar de detailpagina van een
+            device zodat ik alle informatie kan inzien.
           </td>
-          <td></td>
+          <td>Vanuit overzicht devices (US 1) of per URL</td>
         </tr>
         <tr>
           <td>3</td>
           <td>
-            Als ingelogde gebruiker wil ik mijn eigen movies kunnen bewerken en
-            verwijderen, zodat ik mijn informatie up-to-date kan houden.
+            Als gebruiker wil ik zelf een device kunnen toevoegen, zodat ik mijn
+            IoT-inventaris kan bijhouden.
           </td>
-          <td></td>
+          <td>-</td>
         </tr>
         <tr>
           <td>4</td>
           <td>
-            <p>Voeg zelf meer userstories toe.</p>
+            Als gebruiker wil ik mijn eigen devices kunnen bewerken en
+            verwijderen, zodat ik mijn informatie up-to-date kan houden.
           </td>
-          <td></td>
+          <td>Navigatie via detailpagina device of per URL</td>
         </tr>
       </tbody>
     </table>
