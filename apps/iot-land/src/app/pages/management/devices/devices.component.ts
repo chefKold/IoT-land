@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Device } from "@iot-land/data-access";
-import { DeviceService } from "../../../services/device.service";
+import { DeviceService } from "../../../services/device.service.service";
 @Component({
   selector: "iot-land-devices",
   templateUrl: "./devices.component.html",

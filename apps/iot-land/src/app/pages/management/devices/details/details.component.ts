@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Device } from "@iot-land/data-access";
-import { DeviceService } from "apps/iot-land/src/app/services/device.service";
+import { DeviceService } from "apps/iot-land/src/app/services/device.service.service";
 
 @Component({
   selector: "iot-land-details",
