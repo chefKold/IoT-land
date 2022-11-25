@@ -18,8 +18,10 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
-    const deviceIdFromRoute = Number(routeParams.get("deviceId"));
 
-    this.device = this.devicesService.getDeviceById(deviceIdFromRoute);
+    if (routeParams.has("deviceId")) {
+      const deviceIdFromRoute = Number(routeParams.get("deviceId"));
+      this.device = this.devicesService.getDeviceById(deviceIdFromRoute);
+    }
   }
 }
