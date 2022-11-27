@@ -13,7 +13,7 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private devicesService: DeviceService
+    private deviceService: DeviceService
   ) {}
 
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class DetailsComponent implements OnInit {
 
     if (routeParams.has("deviceId")) {
       const deviceIdFromRoute = Number(routeParams.get("deviceId"));
-      this.device = this.devicesService.getDeviceById(deviceIdFromRoute);
+      this.device = this.deviceService.getDeviceById(deviceIdFromRoute);
     }
   }
 }

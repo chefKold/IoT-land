@@ -8,7 +8,7 @@ export class Device {
   networkAddress: string | null = null;
 
   constructor(
-    id: number,
+    id: number | null,
     name: string,
     description: string,
     installationDate: Date,

@@ -27,7 +27,7 @@
         <td>{{ device.inMaintenance }}</td>
         <td>{{ device.networkAddress }}</td>
         <td>
-          <a routerLink="/home">
+          <a [routerLink]="[device.id, 'edit']">
             <img src="../../assets/images/edit-icon.svg"
           /></a>
         </td>

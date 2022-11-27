@@ -1,0 +1,6 @@
+<div *ngIf="device">
+  <iot-land-device-form
+    [device]="device"
+    (deviceFormSubmit)="editDevice($event)"
+  ></iot-land-device-form>
+</div>

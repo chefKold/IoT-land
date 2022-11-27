@@ -5,6 +5,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { CreateDeviceComponent } from "./pages/management/devices/create/create.device.component";
 import { DetailsComponent } from "./pages/management/devices/details/details.component";
 import { DevicesComponent } from "./pages/management/devices/devices.component";
+import { EditDeviceComponent } from "./pages/management/devices/edit/edit.device.component";
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
@@ -37,6 +38,12 @@ const routes: Routes = [
     title: "Device details",
     pathMatch: "full",
     component: DetailsComponent,
+  },
+  {
+    path: "devices/:deviceId/edit",
+    title: "Edit device",
+    pathMatch: "full",
+    component: EditDeviceComponent,
   },
 ];
 

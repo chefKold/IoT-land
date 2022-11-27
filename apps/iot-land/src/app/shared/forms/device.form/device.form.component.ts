@@ -10,7 +10,7 @@ import { DeviceService } from "../../../services/device.service";
 })
 export class DeviceFormComponent implements OnInit {
   form!: FormGroup;
-  @Input() device: Device = new Device(0, "", "", new Date(), false, 0, "");
+  @Input() device: Device = new Device(null, "", "", new Date(), false, 0, "");
   @Output() deviceFormSubmit = new EventEmitter<Device>();
 
   constructor(private deviceService: DeviceService) {}
@@ -36,7 +36,7 @@ export class DeviceFormComponent implements OnInit {
 
   onSubmit() {
     const device = new Device(
-      this.deviceService.generateSurrogateId(),
+      this.device.id ?? this.deviceService.generateSurrogateId(),
       this.form.value.name,
       this.form.value.description,
       new Date(this.form.value.installationDate),

@@ -28,8 +28,7 @@ export class DeviceService {
   }
 
   updateDevice(device: Device): void {
-    const index = this.storage.findIndex((d) => d.id === device.id);
-    this.storage[index] = device;
+    this.storage[(device.id ?? -1) - 1] = device;
   }
 
   generateSurrogateId(): number {
