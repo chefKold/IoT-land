@@ -9,10 +9,11 @@ import { HomeComponent } from "./pages/home/home.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { DevicesComponent } from "./pages/management/devices/devices.component";
-import { DetailsComponent } from "./pages/management/devices/details/details.component";
+import { DeviceDetailsComponent } from "./pages/management/devices/details/details.device.component";
 import { CreateDeviceComponent } from "./pages/management/devices/create/create.device.component";
 import { DeviceFormComponent } from "./shared/forms/device.form/device.form.component";
 import { EditDeviceComponent } from "./pages/management/devices/edit/edit.device.component";
+import { DeleteDeviceComponent } from "./pages/management/devices/delete/delete.device.component";
 
 @NgModule({
   declarations: [
@@ -22,10 +23,11 @@ import { EditDeviceComponent } from "./pages/management/devices/edit/edit.device
     AboutComponent,
     FooterComponent,
     DevicesComponent,
-    DetailsComponent,
+    DeviceDetailsComponent,
     CreateDeviceComponent,
     DeviceFormComponent,
     EditDeviceComponent,
+    DeleteDeviceComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

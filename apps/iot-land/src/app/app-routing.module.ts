@@ -3,7 +3,8 @@ import { RouterModule, Routes } from "@angular/router";
 import { AboutComponent } from "./pages/about/about.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { CreateDeviceComponent } from "./pages/management/devices/create/create.device.component";
-import { DetailsComponent } from "./pages/management/devices/details/details.component";
+import { DeleteDeviceComponent } from "./pages/management/devices/delete/delete.device.component";
+import { DeviceDetailsComponent } from "./pages/management/devices/details/details.device.component";
 import { DevicesComponent } from "./pages/management/devices/devices.component";
 import { EditDeviceComponent } from "./pages/management/devices/edit/edit.device.component";
 
@@ -12,38 +13,38 @@ const routes: Routes = [
   {
     path: "home",
     title: "Homepagina",
-    pathMatch: "full",
     component: HomeComponent,
   },
   {
     path: "about",
     title: "Over ons",
-    pathMatch: "full",
     component: AboutComponent,
   },
   {
     path: "devices",
     title: "Alle devices",
-    pathMatch: "full",
     component: DevicesComponent,
   },
   {
     path: "devices/create",
     title: "Create device",
-    pathMatch: "full",
     component: CreateDeviceComponent,
   },
   {
     path: "devices/:deviceId",
     title: "Device details",
-    pathMatch: "full",
-    component: DetailsComponent,
+    component: DeviceDetailsComponent,
   },
   {
     path: "devices/:deviceId/edit",
     title: "Edit device",
-    pathMatch: "full",
     component: EditDeviceComponent,
+  },
+  {
+    path: "devices/:deviceId/delete",
+    title: "Delete device",
+    pathMatch: "full",
+    component: DeleteDeviceComponent,
   },
 ];
 
