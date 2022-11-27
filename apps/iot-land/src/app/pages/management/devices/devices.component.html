@@ -21,7 +21,7 @@
             {{ device.name }}
           </a>
         </td>
-        <td>{{ device.installationDate.toLocaleDateString("nl-NL") }}</td>
+        <td>{{ device.installationDate?.toLocaleDateString("nl-NL") }}</td>
         <td>{{ device.inMaintenance }}</td>
         <td>{{ device.networkAddress }}</td>
       </tr>

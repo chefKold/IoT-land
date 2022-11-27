@@ -1,1 +1,1 @@
-export * from "./lib/device.interface";
+export * from "./lib/device.model";
