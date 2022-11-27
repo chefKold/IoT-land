@@ -1,0 +1,6 @@
+<div *ngIf="facility">
+  <iot-land-facility-form
+    [facility]="facility"
+    (facilityFormSubmit)="editFacility($event)"
+  ></iot-land-facility-form>
+</div>

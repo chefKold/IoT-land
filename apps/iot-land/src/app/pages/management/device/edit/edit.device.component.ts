@@ -4,7 +4,7 @@ import { Device } from "@iot-land/data-access";
 import { DeviceService } from "../../../../services/device.service";
 
 @Component({
-  selector: "iot-land-edit",
+  selector: "iot-land-edit-device",
   templateUrl: "./edit.device.component.html",
   styleUrls: ["./edit.device.component.css"],
 })

@@ -19,7 +19,7 @@ import { DeleteDeviceComponent } from "./pages/management/device/delete/delete.d
 
 import { FacilityComponent } from "./pages/management/facility/facility.component";
 import { CreateFacilityComponent } from "./pages/management/facility/create/create.facility.component";
-import { EditFacilityComponent } from "./pages/management/facility/edit/edit.component";
+import { EditFacilityComponent } from "./pages/management/facility/edit/edit.facility.component";
 import { DeleteFacilityComponent } from "./pages/management/facility/delete/delete.facility.component";
 import { FacilityDetailsComponent } from "./pages/management/facility/details/details.facility.component";
 import { FacilityFormComponent } from "./shared/forms/facility/facility.form.component";
