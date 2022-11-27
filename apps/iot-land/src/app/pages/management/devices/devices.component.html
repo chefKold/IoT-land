@@ -7,6 +7,8 @@
         <th scope="col">Installatie datum</th>
         <th scope="col">Is in onderhoud</th>
         <th scope="col">Netwerkadres</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +26,16 @@
         <td>{{ device.installationDate?.toLocaleDateString("nl-NL") }}</td>
         <td>{{ device.inMaintenance }}</td>
         <td>{{ device.networkAddress }}</td>
+        <td>
+          <a routerLink="/home">
+            <img src="../../assets/images/edit-icon.svg"
+          /></a>
+        </td>
+        <td>
+          <a routerLink="/home">
+            <img src="../../assets/images/delete-icon.svg" />
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>

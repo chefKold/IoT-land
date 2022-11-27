@@ -11,6 +11,7 @@ import { FooterComponent } from "./shared/footer/footer.component";
 import { DevicesComponent } from "./pages/management/devices/devices.component";
 import { DetailsComponent } from "./pages/management/devices/details/details.component";
 import { CreateDeviceComponent } from "./pages/management/devices/create/create.device.component";
+import { DeviceFormComponent } from "./shared/forms/device.form/device.form.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CreateDeviceComponent } from "./pages/management/devices/create/create.
     DevicesComponent,
     DetailsComponent,
     CreateDeviceComponent,
+    DeviceFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
