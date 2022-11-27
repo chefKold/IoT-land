@@ -14,6 +14,7 @@ import { CreateDeviceComponent } from "./pages/management/devices/create/create.
 import { DeviceFormComponent } from "./shared/forms/device.form/device.form.component";
 import { EditDeviceComponent } from "./pages/management/devices/edit/edit.device.component";
 import { DeleteDeviceComponent } from "./pages/management/devices/delete/delete.device.component";
+import { FacilityComponent } from "./pages/management/facilities/facilities.component";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DeleteDeviceComponent } from "./pages/management/devices/delete/delete.
     DeviceFormComponent,
     EditDeviceComponent,
     DeleteDeviceComponent,
+    FacilityComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

@@ -7,6 +7,7 @@ import { DeleteDeviceComponent } from "./pages/management/devices/delete/delete.
 import { DeviceDetailsComponent } from "./pages/management/devices/details/details.device.component";
 import { DevicesComponent } from "./pages/management/devices/devices.component";
 import { EditDeviceComponent } from "./pages/management/devices/edit/edit.device.component";
+import { FacilityComponent } from "./pages/management/facilities/facilities.component";
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
@@ -20,6 +21,15 @@ const routes: Routes = [
     title: "Over ons",
     component: AboutComponent,
   },
+
+  // Facility routes
+  {
+    path: "facilities",
+    title: "Alle facilities",
+    component: FacilityComponent,
+  },
+
+  // Device routes
   {
     path: "devices",
     title: "Alle devices",

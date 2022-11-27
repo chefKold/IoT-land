@@ -1,0 +1,48 @@
+<div class="min-vh100">
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Naam</th>
+        <th scope="col">Straat</th>
+        <th scope="col">Huisnummer</th>
+        <th scope="col">Stad</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let facility of facilities">
+        <td>{{ facility.id }}</td>
+
+        <td>
+          <a
+            [title]="facility.name + ' details'"
+            [routerLink]="['/facilities', facility.id]"
+          >
+            {{ facility.name }}
+          </a>
+        </td>
+        <td>{{ facility.address?.street ?? "Geen straat" }}</td>
+        <td>{{ facility.address?.houseNumber ?? "Geen huisnummer" }}</td>
+        <td>{{ facility.address?.city ?? "Geen stad" }}</td>
+        <td>
+          <a [routerLink]="[facility.id, 'edit']">
+            <img src="../../assets/images/edit-icon.svg"
+          /></a>
+        </td>
+        <td>
+          <a [routerLink]="[facility.id, 'delete']">
+            <img src="../../assets/images/delete-icon.svg" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a
+    [routerLink]="['/facilities/create']"
+    class="btn btn-primary btn-primary-color"
+  >
+    Facility aanmaken
+  </a>
+</div>
