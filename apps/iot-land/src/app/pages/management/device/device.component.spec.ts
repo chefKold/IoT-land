@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 
-import { DevicesComponent } from "./devices.component";
+import { DevicesComponent } from "./device.component";
 
 describe("DevicesComponent", () => {
   let component: DevicesComponent;
