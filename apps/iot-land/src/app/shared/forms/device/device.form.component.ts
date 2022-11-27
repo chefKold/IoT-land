@@ -2,7 +2,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Device } from "@iot-land/data-access";
 import { DeviceService } from "../../../services/device.service";
-
+import { convertDateObjectToDateOnlyString } from "@iot-land/data-access";
 @Component({
   selector: "iot-land-device-form",
   templateUrl: "./device.form.component.html",
@@ -16,14 +16,18 @@ export class DeviceFormComponent implements OnInit {
   constructor(private deviceService: DeviceService) {}
 
   ngOnInit(): void {
+    console.log(
+      convertDateObjectToDateOnlyString(this.device.installationDate)
+    );
     this.form = new FormGroup({
       name: new FormControl(this.device.name, [Validators.required]),
       description: new FormControl(this.device.description, [
         Validators.required,
       ]),
-      installationDate: new FormControl(this.device.installationDate, [
-        Validators.required,
-      ]),
+      installationDate: new FormControl(
+        convertDateObjectToDateOnlyString(this.device.installationDate),
+        [Validators.required]
+      ),
       inMaintenance: new FormControl(this.device.inMaintenance, [
         Validators.required,
       ]),

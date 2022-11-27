@@ -1,6 +1,6 @@
 <div *ngIf="facility">
   <h1>{{ facility.name }}</h1>
-
+  <h2>Details</h2>
   <table style="width: 30%" class="table table-sm">
     <tr>
       <th scope="col">Id</th>
@@ -15,8 +15,8 @@
       <td>{{ facility.address }}</td>
     </tr>
   </table>
-
   <div>
+    <h2>Beschrijving</h2>
     <p>
       {{ facility.description }}
     </p>

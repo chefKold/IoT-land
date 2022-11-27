@@ -1,5 +1,6 @@
 <div *ngIf="device">
   <h1>{{ device.name }}</h1>
+  <h2>Details</h2>
   <table style="width: 30%" class="table table-sm">
     <tr>
       <th scope="col">Id</th>
@@ -11,7 +12,7 @@
     </tr>
     <tr>
       <th scope="col">Installatiedatum</th>
-      <td>{{ device.installationDate?.toLocaleDateString("nl-NL") }}</td>
+      <td>{{ device.installationDate | date : "mediumDate" : "NL" }}</td>
     </tr>
     <tr>
       <th scope="col">Is in onderhoud</th>
@@ -23,6 +24,7 @@
     </tr>
   </table>
   <div>
+    <h2>Beschrijving</h2>
     <p>
       {{ device.description }}
     </p>

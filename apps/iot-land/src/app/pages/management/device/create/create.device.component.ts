@@ -11,7 +11,7 @@ import { DeviceService } from "../../../../services/device.service";
 })
 export class CreateDeviceComponent {
   // Blank device
-  device: Device = new Device(0, "", "", new Date(), false, 0, "");
+  device: Device = new Device(null, "", "", new Date(), false, 0, "");
 
   constructor(private deviceService: DeviceService, private router: Router) {}
 

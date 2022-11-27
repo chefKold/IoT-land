@@ -39,9 +39,33 @@ export class FacilityService {
     this.storage.push(
       new Facility(
         1,
-        "Gebouw 'T Koekje",
-        "Een mooi gebouw",
-        new Address("Werkstraat", 1, "Amsterdam")
+        "IoT-Land HQ",
+        "Op het HQ kun je van alles doen, maar tegelijkertijd ook niet. Het is een beetje een raar gebouw. Maar het is wel een gebouw. En dat is al heel wat. Kan er nog meer over worden gezegd behalve dat het een gebouw is? Volgens mij niet, het is namelijk een gebouw. En dat is het.",
+        new Address("Lovensdijkstraat", 1, "Breda")
+      ),
+      new Facility(
+        2,
+        "IoT-Land administratie",
+        "Bij de administratie kun je ook van alles doen, alleen iets minder dan op het HQ. Het is een beetje een raar gebouw. Maar het is wel een gebouw. En dat is al heel wat. Kan er nog meer over worden gezegd behalve dat het een gebouw is? Volgens mij niet, het is namelijk een gebouw. En dat is het.",
+        new Address("Lovensdijkstraat", 2, "Breda")
+      ),
+      new Facility(
+        3,
+        "R&D gebouw A",
+        "In gebouw A kun je van alles doen, maar dan ook echt alles. Er gelden geen regels zoals in de echte wereld. Het is een beetje een raar gebouw. Maar het is wel een gebouw. En dat is al heel wat. Kan er nog meer over worden gezegd behalve dat het een gebouw is? Volgens mij niet, het is namelijk een gebouw. En dat is het.",
+        new Address("Lovensdijkstraat", 3, "Breda")
+      ),
+      new Facility(
+        4,
+        "R&D gebouw B",
+        "In gebouw B kun je van alles doen, maar dan ook echt alles. Er gelden geen regels zoals in de echte wereld. Het is een beetje een raar gebouw. Maar het is wel een gebouw. En dat is al heel wat. Kan er nog meer over worden gezegd behalve dat het een gebouw is? Volgens mij niet, het is namelijk een gebouw. En dat is het.",
+        new Address("Lovensdijkstraat", 4, "Breda")
+      ),
+      new Facility(
+        5,
+        "R&D gebouw C",
+        "In gebouw C kun je van alles doen, maar dan ook echt alles. Er gelden geen regels zoals in de echte wereld. Het is een beetje een raar gebouw. Maar het is wel een gebouw. En dat is al heel wat. Kan er nog meer over worden gezegd behalve dat het een gebouw is? Volgens mij niet, het is namelijk een gebouw. En dat is het.",
+        new Address("Lovensdijkstraat", 4, "Breda")
       )
     );
   }
