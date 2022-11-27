@@ -13,7 +13,7 @@ import { AboutComponent } from "./pages/about/about.component";
 import { DevicesComponent } from "./pages/management/device/device.component";
 import { DeviceDetailsComponent } from "./pages/management/device/details/details.device.component";
 import { CreateDeviceComponent } from "./pages/management/device/create/create.device.component";
-import { DeviceFormComponent } from "./shared/forms/device.form/device.form.component";
+import { DeviceFormComponent } from "./shared/forms/device/device.form.component";
 import { EditDeviceComponent } from "./pages/management/device/edit/edit.device.component";
 import { DeleteDeviceComponent } from "./pages/management/device/delete/delete.device.component";
 
@@ -22,6 +22,7 @@ import { CreateFacilityComponent } from "./pages/management/facility/create/crea
 import { EditFacilityComponent } from "./pages/management/facility/edit/edit.component";
 import { DeleteFacilityComponent } from "./pages/management/facility/delete/delete.facility.component";
 import { FacilityDetailsComponent } from "./pages/management/facility/details/details.facility.component";
+import { FacilityFormComponent } from "./shared/forms/facility/facility.form.component";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FacilityDetailsComponent } from "./pages/management/facility/details/de
     EditFacilityComponent,
     DeleteFacilityComponent,
     FacilityDetailsComponent,
+    FacilityFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

@@ -53,7 +53,6 @@ const routes: Routes = [
   {
     path: "facilities/:facilityId/delete",
     title: "Delete facility",
-    pathMatch: "full",
     component: DeleteFacilityComponent,
   },
 
