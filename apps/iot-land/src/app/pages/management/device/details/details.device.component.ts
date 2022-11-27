@@ -4,7 +4,7 @@ import { Device } from "@iot-land/data-access";
 import { DeviceService } from "../../../../services/device.service";
 
 @Component({
-  selector: "iot-land-details",
+  selector: "iot-land-device-details",
   templateUrl: "./details.device.component.html",
   styleUrls: ["./details.device.component.css"],
 })

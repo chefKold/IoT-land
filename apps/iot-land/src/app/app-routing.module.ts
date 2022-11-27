@@ -7,6 +7,7 @@ import { DeleteDeviceComponent } from "./pages/management/device/delete/delete.d
 import { DeviceDetailsComponent } from "./pages/management/device/details/details.device.component";
 import { DevicesComponent } from "./pages/management/device/device.component";
 import { EditDeviceComponent } from "./pages/management/device/edit/edit.device.component";
+import { FacilityDetailsComponent } from "./pages/management/facility/details/details.facility.component";
 import { FacilityComponent } from "./pages/management/facility/facility.component";
 
 const routes: Routes = [
@@ -27,6 +28,11 @@ const routes: Routes = [
     path: "facilities",
     title: "Alle facilities",
     component: FacilityComponent,
+  },
+  {
+    path: "facilities/:facilityId",
+    title: "Facility details",
+    component: FacilityDetailsComponent,
   },
 
   // Device routes

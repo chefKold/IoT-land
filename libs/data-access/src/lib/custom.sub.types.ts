@@ -8,4 +8,8 @@ export class Address {
     this.houseNumber = houseNumber;
     this.city = city;
   }
+
+  public toString = (): string => {
+    return `${this.street} ${this.houseNumber} te ${this.city}`;
+  };
 }
