@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Device } from "@iot-land/data-access";
 import { DeviceService } from "../../../../services/device.service";
 
 @Component({

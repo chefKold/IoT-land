@@ -1,14 +1,20 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AboutComponent } from "./pages/about/about.component";
+
 import { HomeComponent } from "./pages/home/home.component";
-import { CreateDeviceComponent } from "./pages/management/device/create/create.device.component";
-import { DeleteDeviceComponent } from "./pages/management/device/delete/delete.device.component";
-import { DeviceDetailsComponent } from "./pages/management/device/details/details.device.component";
+import { AboutComponent } from "./pages/about/about.component";
+
 import { DevicesComponent } from "./pages/management/device/device.component";
+import { DeviceDetailsComponent } from "./pages/management/device/details/details.device.component";
+import { CreateDeviceComponent } from "./pages/management/device/create/create.device.component";
 import { EditDeviceComponent } from "./pages/management/device/edit/edit.device.component";
-import { FacilityDetailsComponent } from "./pages/management/facility/details/details.facility.component";
+import { DeleteDeviceComponent } from "./pages/management/device/delete/delete.device.component";
+
 import { FacilityComponent } from "./pages/management/facility/facility.component";
+import { CreateFacilityComponent } from "./pages/management/facility/create/create.facility.component";
+import { EditFacilityComponent } from "./pages/management/facility/edit/edit.component";
+import { DeleteFacilityComponent } from "./pages/management/facility/delete/delete.facility.component";
+import { FacilityDetailsComponent } from "./pages/management/facility/details/details.facility.component";
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
@@ -30,9 +36,25 @@ const routes: Routes = [
     component: FacilityComponent,
   },
   {
+    path: "facilities/create",
+    title: "Create facility",
+    component: CreateFacilityComponent,
+  },
+  {
     path: "facilities/:facilityId",
     title: "Facility details",
     component: FacilityDetailsComponent,
+  },
+  {
+    path: "facilities/:facilityId/edit",
+    title: "Edit facility",
+    component: EditFacilityComponent,
+  },
+  {
+    path: "facilities/:facilityId/delete",
+    title: "Delete facility",
+    pathMatch: "full",
+    component: DeleteFacilityComponent,
   },
 
   // Device routes
@@ -59,7 +81,6 @@ const routes: Routes = [
   {
     path: "devices/:deviceId/delete",
     title: "Delete device",
-    pathMatch: "full",
     component: DeleteDeviceComponent,
   },
 ];
